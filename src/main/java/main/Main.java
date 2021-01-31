@@ -6,9 +6,12 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
+import java.util.ArrayList;
 
 import javax.security.auth.login.LoginException;
+import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Main extends ListenerAdapter {
@@ -16,9 +19,8 @@ public class Main extends ListenerAdapter {
         JDA jda = JDABuilder
                 .createDefault("NzYxOTk5ODMyOTk4NzM5OTg4.X3ixpQ.tCb-z459FaEzhdv5Yhmk7lw5Q3A")
                 .addEventListeners(new Main())
-                .setActivity(Activity.watching("bop bop bop"))
+                .setActivity(Activity.listening("bop bop bop"))
                 .build().awaitReady();
-
 
     }
 
@@ -28,6 +30,8 @@ public class Main extends ListenerAdapter {
             return;
         }
     String content = event.getMessage().getContentRaw();
+        List<String> vibes = new ArrayList<>(List.of("https://media.discordapp.net/attachments/762037332139966484/805456927940542494/tenor_4.gif","https://media.discordapp.net/attachments/762037332139966484/805456524515606558/tenor_2.gif"));
+        Random random = new Random();
         if (content.startsWith("-")){
             String command = content.substring(1);
             if (command.equalsIgnoreCase("ping")){
@@ -37,9 +41,13 @@ public class Main extends ListenerAdapter {
                 });
 
             }
-            else if (command.equalsIgnoreCase("bop")){
+            else if (command.equalsIgnoreCase("bop")) {
                 event.getChannel().sendMessage("https://tenor.com/view/big-mouth-cat-gif-18848042").queue();
+            }
+           else if (command.equalsIgnoreCase("vibe")){
+               event.getChannel().sendMessage("Feeling the vibe").queue(message -> event.getChannel().sendMessage(vibes.get(random.nextInt(vibes.size()))).queue());
+                }
             }
         }
     }
-}
+
