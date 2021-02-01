@@ -19,7 +19,7 @@ public class Main extends ListenerAdapter {
         JDA jda = JDABuilder
                 .createDefault("NzYxOTk5ODMyOTk4NzM5OTg4.X3ixpQ.tCb-z459FaEzhdv5Yhmk7lw5Q3A")
                 .addEventListeners(new Main())
-                .setActivity(Activity.listening("bop bop bop"))
+                .setActivity(Activity.listening("bop bop bop | -help"))
                 .build().awaitReady();
 
     }
@@ -47,6 +47,9 @@ public class Main extends ListenerAdapter {
            else if (command.equalsIgnoreCase("vibe")){
                event.getChannel().sendMessage("Feeling the vibe").queue(message -> event.getChannel().sendMessage(vibes.get(random.nextInt(vibes.size()))).queue());
                 }
+           else if (command.equalsIgnoreCase("help")){
+               event.getChannel().sendMessage(EmbedsFactor.HelpEmbed()).queue();
+            }
             }
         }
     }
