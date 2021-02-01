@@ -9,7 +9,7 @@ public class EmbedsFactor {
     {
         return new EmbedBuilder()
                 .setTitle("Commands for BopBot")
-                .setDescription("`bop: Will send you a gif of bopcat` \n \n `vibe: Will send a random gif of bopcat vibing` \n \n `ping: Will send you the current ping of the bot`")
+                .setDescription("`bop: Will send a gif of bopcat` \n \n `vibe: Will send a random gif of bopcat vibing` \n \n `ping: Will send you the current ping of the bot`")
                 .build();
     }
 }
