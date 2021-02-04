@@ -43,7 +43,8 @@ public class Main extends ListenerAdapter {
                 event.getChannel().sendMessage("https://tenor.com/view/big-mouth-cat-gif-18848042").queue();
             }
            else if (command.equalsIgnoreCase("vibe")){
-               event.getChannel().sendMessage("Feeling the vibe").queue(message -> event.getChannel().sendMessage(vibes.get(random.nextInt(vibes.size()))).queue());
+               event.getChannel().sendMessage("Feeling the vibe").queue(message -> event
+                       .getChannel().sendMessage(vibes.get(random.nextInt(vibes.size()))).queue());
                 }
            else if (command.equalsIgnoreCase("help")){
                event.getChannel().sendMessage(EmbedFactory.HelpEmbed()).queue();
