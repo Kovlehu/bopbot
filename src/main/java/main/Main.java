@@ -10,9 +10,7 @@ import java.util.ArrayList;
 
 import javax.security.auth.login.LoginException;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Main extends ListenerAdapter {
     public static void main(String[] args) throws LoginException, InterruptedException {
@@ -48,7 +46,7 @@ public class Main extends ListenerAdapter {
                event.getChannel().sendMessage("Feeling the vibe").queue(message -> event.getChannel().sendMessage(vibes.get(random.nextInt(vibes.size()))).queue());
                 }
            else if (command.equalsIgnoreCase("help")){
-               event.getChannel().sendMessage(EmbedsFactor.HelpEmbed()).queue();
+               event.getChannel().sendMessage(EmbedFactory.HelpEmbed()).queue();
             }
             }
         }

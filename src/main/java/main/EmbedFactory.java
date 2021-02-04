@@ -3,7 +3,7 @@ package main;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 
-public class EmbedsFactor {
+public class EmbedFactory {
 
     public static MessageEmbed HelpEmbed()
     {
