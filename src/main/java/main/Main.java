@@ -49,6 +49,13 @@ public class Main extends ListenerAdapter {
            else if (command.equalsIgnoreCase("help")){
                event.getChannel().sendMessage(EmbedFactory.HelpEmbed()).queue();
             }
+           else if (command.equalsIgnoreCase("economyhelp")){
+               event.getChannel().sendMessage(EmbedFactory.EconomyHelpEmbed()).queue();
+            }
+           else if (command.equalsIgnoreCase("shop")){
+               event.getChannel().sendMessage(EmbedFactory.ShopEmbed()).queue();
+            }
+
             }
         }
     }
