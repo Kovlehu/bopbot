@@ -47,13 +47,13 @@ public class Main extends ListenerAdapter {
                        .getChannel().sendMessage(vibes.get(random.nextInt(vibes.size()))).queue());
                 }
            else if (command.equalsIgnoreCase("help")){
-               event.getChannel().sendMessage(EmbedFactory.HelpEmbed()).queue();
+               event.getChannel().sendMessage(EmbedFactory.helpEmbed()).queue();
             }
            else if (command.equalsIgnoreCase("economyhelp")){
-               event.getChannel().sendMessage(EmbedFactory.EconomyHelpEmbed()).queue();
+               event.getChannel().sendMessage(EmbedFactory.economyHelpEmbed()).queue();
             }
            else if (command.equalsIgnoreCase("shop")){
-               event.getChannel().sendMessage(EmbedFactory.ShopEmbed()).queue();
+               event.getChannel().sendMessage(EmbedFactory.shopEmbed()).queue();
             }
 
             }

@@ -5,7 +5,7 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 
 public class EmbedFactory {
 
-    public static MessageEmbed HelpEmbed()
+    public static MessageEmbed helpEmbed()
     {
         return new EmbedBuilder()
                 .setTitle("Commands for BopBot")
@@ -13,14 +13,14 @@ public class EmbedFactory {
                 .build();
 
     }
-    public static MessageEmbed EconomyHelpEmbed()
+    public static MessageEmbed economyHelpEmbed()
     {
         return new EmbedBuilder()
                 .setTitle("Economy Commands")
                 .setDescription("These are the commands you'll need for the economy part of the bot \n \n `balance: Will send you how many BopCoins you have` \n \n `daily: Will give you your daily amount of 200 BopCoins` \n \n `shop: Will show you the shop`")
                 .build();
     }
-    public  static MessageEmbed ShopEmbed()
+    public  static MessageEmbed shopEmbed()
     {
         return new EmbedBuilder()
                 .setTitle("Shop")
