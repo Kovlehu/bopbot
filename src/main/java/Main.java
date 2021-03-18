@@ -10,7 +10,7 @@ public class Main extends ListenerAdapter {
     public static void main(String[] args) throws LoginException, InterruptedException {
         JDA jda = JDABuilder
                 .createDefault("NzYxOTk5ODMyOTk4NzM5OTg4.X3ixpQ.tCb-z459FaEzhdv5Yhmk7lw5Q3A")
-                .addEventListeners(new MiscCommands)
+                .addEventListeners(new MiscCommands())
                 .setActivity(Activity.listening("bop bop bop | -help"))
                 .build().awaitReady();
 
